@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unleash your underdog - Play</title>
+    <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+    <!-- Background music -->
+<audio id="backgroundMusic" src="./music/master_of_puppets_metallica.mp3" loop autoplay preload="auto"></audio>
+<!-- Mute/Unmute toggle -->
+<button id="muteToggle" class="mute-btn">🔊</button>
+    <audio id="powerSound" src="./sounds/mortal.mp3" preload="auto"></audio>
+    <video autoplay muted loop playsinline class="grain-bg">
+        <source src="./video/grunge_effect_5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <img src="./images/logo.svg" alt="Underdog Logo" class="logo" />
+            <div id="underdog-meter-container">
+                <div id="underdog-meter-bar"></div>
+                <span id="underdog-meter-text">💤 Just warming up...</span>
+              </div>
+            <h2 id="question">What is the answer to this question?</h2>
+            <div class="choice-container">
+                <div class="choice-prefix">
+                    <img src="./images/goku.svg" alt="Option A" width="25" height="25" />
+                    </div>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <div class="choice-prefix">
+                    <img src="./images/ironman.svg" alt="Option A" width="25" height="25" />
+                    </div>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <div class="choice-prefix">
+                    <img src="./images/deadpool.svg" alt="Option A" width="25" height="25" />
+                    </div>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <div class="choice-prefix">
+                    <img src="./images/darth.svg" alt="Option A" width="25" height="25" />
+                    </div>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    
+    </div>
+    <script src="game_1.js"></script>
+    <script src="player.js"></script>
+
+</body>
+</html>

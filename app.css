@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Breymont Bold';
+    src: url('./fonts/Breymont-Bold.ttf') format('truetype'); /* Adjust path if needed */
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/noise-effect-01.png');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.5;  
+    z-index: -1;
+    pointer-events: none;
+    animation: noiseanimation 1s steps(2) infinite
+}*/
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+
+.grain-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 100%; /* Adjust to control intensity */
+    pointer-events: none;
+    
+  }
+  
+
+:root {
+    background-color: #0b0b0b;
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Breymont Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: #f9f9f9;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color:#f9f9f9;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+/*utilities*/
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem ;
+}
+
+.container > * {
+    width: 100%;
+
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/*buttons*/
+.btn {
+font-size: 1.8rem;
+padding: 1rem 0;
+width: 20rem;
+text-align: center;
+border: none;
+margin-bottom: 1rem;
+text-decoration: none;
+color: #ffffff;
+background-color: #eb1c24;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      font-size: 55%; /* Slightly smaller base */
+    }
+  
+    .logo {
+      width: 80px;
+      margin-bottom: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  
+    h1 > span {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  
+    h3 {
+      font-size: 2.2rem;
+    }
+  
+    .btn {
+      font-size: 1.6rem;
+      width: 16rem;
+      padding: 1rem;
+    }
+  
+    .container {
+      padding: 2rem;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      font-size: 50%;
+    }
+  
+    .logo {
+      width: 60px;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+    }
+  
+    .btn {
+      font-size: 1.5rem;
+      width: 100%;
+      max-width: 20rem;
+    }
+
+  }
+  
+  .social-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .social-text {
+    color: #f9f9f9;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    color: #f9f9f9;
+    transition: color 0.3s ease;
+  }
+    
+  .social-icons a:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(7483%) hue-rotate(357deg) brightness(92%) contrast(101%);
+    /* This filter makes the icon red on hover */
+  }
+  
+  
+  .btn:hover,
+  a:hover {
+    cursor: url('./images/fighter_pointer.png') 16 16, auto;
+  }/* Fade-out animation */
+.fade-out {
+  animation: fadeOut 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.logo-link img {
+  transition: filter 0.3s ease;
+}
+
+.logo-link:hover img {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(7483%) hue-rotate(357deg) brightness(92%) contrast(101%);
+  /* This filter gives a red effect for SVG images */
+}
+
+
+

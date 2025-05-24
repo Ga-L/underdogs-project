@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Underdog Personality</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="game.css" />
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="end.css" />
+</head>
+<body>   
+  
+  <!-- Hover & Click Sounds -->
+
+  <audio id="hoverSound" src="./sounds/hover2.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="./sounds/click.mp3" preload="auto"></audio>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="grain-bg">
+    <source src="./video/grunge_effect_5.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+    
+  </div>
+
+  <!-- Result Container -->
+  <div class="result-container">
+    <div id="end" class="flex-center flex-column">
+      <img src="./images/logo.svg" alt="Underdog Logo" class="logo" />
+      <h2>Your Underdog Type Is:</h2>
+      <div id="personality-result" class="personality-output"></div>
+      <div class="end-buttons">
+        <a id="playAgainButton" href="index.html" class="btn">&#9658 Again</a>
+      </div>      
+
+    </div>
+  </div>  
+
+  <!-- Script -->
+  <script src="end.js"></script>
+
+</body>
+</html>
+

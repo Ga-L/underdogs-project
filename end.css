@@ -1,0 +1,135 @@
+.result-container {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 700px;
+  margin: 6rem auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+#end h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.personality-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  background: none;
+  box-shadow: 0 0 15px rgba(235, 28, 36, 0.4); /* soft red glow */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personality-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+
+
+.personality-output {
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: red;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.grain-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.result-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  max-width: 400px;
+  text-align: left;
+}
+
+.text-content p {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.result-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.end-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn.share-btn {
+  background-color: #444;
+}
+
+.btn.share-btn:hover {
+  background-color: #ff4444;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtlePulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    transform: scale(1);
+  }
+}
+
+.personality-image.pulse {
+  animation: subtlePulse 1.6s ease-in-out infinite;
+  cursor: pointer;
+}
