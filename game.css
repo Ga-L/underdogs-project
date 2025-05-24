@@ -66,6 +66,12 @@
   transition: transform 150ms;
 }
 
+.play-again {
+  width: 20%;
+  height: 20%;
+  
+}
+
 .choice-prefix {
   padding: 1.5rem 2.5rem;
   background-color: #eb1c24;
