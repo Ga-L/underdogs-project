@@ -183,10 +183,26 @@ background-color: #eb1c24;
     }
   
     .btn {
-      font-size: 1.6rem;
-      width: 16rem;
-      padding: 1rem;
+      font-size: 3rem; /* Adjust as needed for mobile scaling */
+      line-height: 1;
+      width: 80px;         /* fixed width */
+      height: 80px;        /* fixed height to avoid distortion */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eb1c24;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+    
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #c7111b;
+    }
+    
   
     .container {
       padding: 2rem;
@@ -268,5 +284,11 @@ background-color: #eb1c24;
   /* This filter gives a red effect for SVG images */
 }
 
-
+@media (max-width: 480px) {
+  .btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+}
 
