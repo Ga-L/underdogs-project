@@ -9,12 +9,12 @@
 }
 
 #end h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
   color: white;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 
 .personality-image {
   width: 150px;
@@ -134,7 +134,3 @@ body {
   cursor: pointer;
 }
 
-.flex-column {
-  align-items: center;
-  padding: 1rem;
-}
