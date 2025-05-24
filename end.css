@@ -133,3 +133,8 @@ body {
   animation: subtlePulse 1.6s ease-in-out infinite;
   cursor: pointer;
 }
+
+.flex-column {
+  align-items: center;
+  padding: 1rem;
+}
