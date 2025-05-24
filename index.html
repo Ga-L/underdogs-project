@@ -80,5 +80,14 @@
     });
   </script>
 
+
+<script>
+  // Forces a reload when the page is loaded from cache (e.g., back button)
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  };
+</script>
 </body>
 </html>

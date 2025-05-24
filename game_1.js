@@ -178,6 +178,18 @@ muteToggle.addEventListener("click", () => {
   updateMuteIcon();
 });
 
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+        backgroundMusic.pause();
+    } else {
+        backgroundMusic.play().catch(err => {
+            console.warn("Music resume failed:", err);
+        });
+    }
+});
+
+
+
 // Initialize icon state
 updateMuteIcon();
 
